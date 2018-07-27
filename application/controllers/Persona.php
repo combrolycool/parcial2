@@ -39,14 +39,13 @@ class Persona extends CI_Controller{
         }
 
             $datos = $this->input->post();
-            if(isset($datos)){
                 $txtCedula = $datos['txtCedula'];
                 $txtNombre = $datos['txtNombre'];
                 $txtApellido = $datos['txtApellido'];
                 $txtEmail = $datos['txtEmail'];
                 $this->Persona_model->InsertPerson($txtCedula, $txtNombre, $txtApellido, $txtEmail);
                 redirect('Persona');
-        }
+        
     }
 
     public function update(){
@@ -56,6 +55,13 @@ class Persona extends CI_Controller{
             'required' => 'El campo Cedula es obligatorio',
             'numeric' => 'El campo Cedula solo puede tener valores numericos'
         ));
+    }
+
+    public function delete($id = null){
+        if($id != null){
+            $this->Persona_model->DeletePerson($id);
+        }
+        redirect('Persona');
     }
 
 }
