@@ -34,9 +34,9 @@ class Persona extends CI_Controller{
         ));
 
         if($this->form_validation->run() == false){
-
             $this->index();
-        }else{
+            return;
+        }
 
             $datos = $this->input->post();
             if(isset($datos)){
@@ -45,8 +45,7 @@ class Persona extends CI_Controller{
                 $txtApellido = $datos['txtApellido'];
                 $txtEmail = $datos['txtEmail'];
                 $this->Persona_model->InsertPerson($txtCedula, $txtNombre, $txtApellido, $txtEmail);
-                $this->index();
-            }
+                redirect('Persona');
         }
     }
 
@@ -63,4 +62,3 @@ class Persona extends CI_Controller{
 
 
 
-?>
