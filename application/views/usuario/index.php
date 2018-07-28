@@ -14,9 +14,6 @@
         <li class="nav-item">
             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Agregar</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-        </li>
     </ul>
     
     <div class="tab-content" id="myTabContent">
@@ -45,7 +42,7 @@
                                 <td><?php echo $person['email']; ?></td>
                                 <td>
                                     <a class = "btn btn-warning" href="<?php echo base_url('Persona/update')."/".$person['cedula']; ?>" tittle="editar">Editar</a>
-                                    <a class = "btn btn-danger" href="<?php echo base_url('Persona/delete')."/".$person['cedula']; ?>" tittle="eliminar">Eliminar</span></a>
+                                    <a class = "btn btn-danger" href="<?php echo base_url('Persona/delete')."/".$person['cedula']; ?>" tittle="eliminar">Eliminar</a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -58,7 +55,7 @@
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         
 
-                    <!-- Formulario -->    
+            <!-- Formulario -->    
             <br>
             <form class="container" method="POST" action="<?php echo base_url('Persona/insert'); ?>">
                 <div class="form-group">
@@ -77,13 +74,10 @@
                     <label for="Email">Email</label>
                     <input type="Email" name="txtEmail" class="form-control" id="Email">
                 </div>
-                <button type="submit" class="btn btn-default">Agregar</button>
+                <button type="submit" class="btn btn-default">Agregar persona</button>
             </form>      
         </div>
         
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            
-        </div>
     </div>
 
 </div>
