@@ -216,7 +216,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 			return $this->_mysqli;
 		}
 
-		return FALSE;
+		return TRUE;
 	}
 
 	// --------------------------------------------------------------------

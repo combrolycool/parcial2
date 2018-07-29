@@ -2,7 +2,7 @@
 <br>
 <form class="container" method="POST" action="<?php echo base_url('Persona/update2'); ?>">
     
-    <?php foreach ($datosUsuario as $value) {     ?>
+    <?php foreach ($datosUsuario as $value) {  print_r($datosUsuario); exit;   ?>
             
     <div class="form-group">
         <input type="hidden" name="txtCedulaVieja" class="form-control" id="CedulaVieja" value="<?php echo $value->cedula; ?>">        

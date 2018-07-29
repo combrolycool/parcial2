@@ -1,5 +1,9 @@
 <?php
 
+require_once("application/creacion_db/php/conexion.php");
+$db = new DB();
+$db = $db->mysql;
+
 class Persona extends CI_Controller{
     
     function __construct(){
